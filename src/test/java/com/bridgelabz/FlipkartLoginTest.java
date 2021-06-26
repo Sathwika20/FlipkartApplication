@@ -5,22 +5,11 @@ public class FlipkartLoginTest extends BaseClass {
 
     FlipkartLogin login = new FlipkartLogin();
 
+
     @Test
-    public void get_UserName() {
+    public void get_UserName() throws InterruptedException {
         login.getUserName();
     }
-
-    @Test
-    public void get_Password() {
-        login.getPassword();
-    }
-
-    @Test
-    public void get_LoginButton() {
-        login.getLoginButton();
-    }
-
-
 }
 
 

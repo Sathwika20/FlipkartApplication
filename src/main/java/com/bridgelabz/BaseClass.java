@@ -6,6 +6,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
+import java.util.concurrent.TimeUnit;
+
 public class BaseClass {
     public static WebDriver driver;
 
@@ -15,12 +17,13 @@ public class BaseClass {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.flipkart.com/");
+
+
     }
 
     @AfterTest
     public void tearDown() {
-        WebDriver driver = new ChromeDriver();
-        driver.quit();
+
         driver.close();
     }
 }
